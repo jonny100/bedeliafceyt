@@ -1,0 +1,4 @@
+admin:
+    horario:
+        context_horarios: Horarios
+        context_vencidos: Vencidos

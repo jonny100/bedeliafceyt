@@ -1,0 +1,86 @@
+services:
+    admin_admin.admin.anio_academico:
+        class: Admin\AdminBundle\Admin\AnioAcademicoAdmin
+        arguments: [~, Admin\AdminBundle\Entity\AnioAcademico, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Año Academico}
+
+    admin_admin.admin.aula:
+        class: Admin\AdminBundle\Admin\AulaAdmin
+        arguments: [~, Admin\AdminBundle\Entity\Aula, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Aula}
+
+    admin_admin.admin.carrera:
+        class: Admin\AdminBundle\Admin\CarreraAdmin
+        arguments: [~, Admin\AdminBundle\Entity\Carrera, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Carrera}
+
+    admin_admin.admin.comision:
+        class: Admin\AdminBundle\Admin\ComisionAdmin
+        arguments: [~, Admin\AdminBundle\Entity\Comision, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Comision}
+
+#    admin_admin.admin.dia_semana:
+#        class: Admin\AdminBundle\Admin\DiaSemanaAdmin
+#        arguments: [~, Admin\AdminBundle\Entity\DiaSemana, SonataAdminBundle:CRUD]
+#        tags:
+#            - {name: sonata.admin, manager_type: orm, group: admin, label: DiaSemana}
+
+    admin_admin.admin.edificio:
+        class: Admin\AdminBundle\Admin\EdificioAdmin
+        arguments: [~, Admin\AdminBundle\Entity\Edificio, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Edificio}
+
+    admin_admin.admin.horario:
+        class: Admin\AdminBundle\Admin\HorarioAdmin
+        arguments: [~, Admin\AdminBundle\Entity\Horario, AdminAdminBundle:HorarioAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Horario}
+
+    admin_admin.admin.materia:
+        class: Admin\AdminBundle\Admin\MateriaAdmin
+        arguments: [~, Admin\AdminBundle\Entity\Materia, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Materia}
+
+    admin_admin.admin.motivo_prestamo:
+        class: Admin\AdminBundle\Admin\MotivoPrestamoAdmin
+        arguments: [~, Admin\AdminBundle\Entity\MotivoPrestamo, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: MotivoPrestamo}
+
+    admin_admin.admin.periodo_lectivo:
+        class: Admin\AdminBundle\Admin\PeriodoLectivoAdmin
+        arguments: [~, Admin\AdminBundle\Entity\PeriodoLectivo, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Periodo Lectivo}
+
+    admin_admin.admin.prestamo:
+        class: Admin\AdminBundle\Admin\PrestamoAdmin
+        arguments: [~, Admin\AdminBundle\Entity\Prestamo, AdminAdminBundle:PrestamoAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Prestamo}
+
+    admin_admin.admin.sector:
+        class: Admin\AdminBundle\Admin\SectorAdmin
+        arguments: [~, Admin\AdminBundle\Entity\Sector, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Sector}
+
+    admin_admin.admin.tipo_clase:
+        class: Admin\AdminBundle\Admin\TipoClaseAdmin
+        arguments: [~, Admin\AdminBundle\Entity\TipoClase, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: TipoClase}
+
+    admin_admin.admin.unidad_academica:
+        class: Admin\AdminBundle\Admin\UnidadAcademicaAdmin
+        arguments: [~, Admin\AdminBundle\Entity\UnidadAcademica, SonataAdminBundle:CRUD]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Unidad Academica}
+
+    

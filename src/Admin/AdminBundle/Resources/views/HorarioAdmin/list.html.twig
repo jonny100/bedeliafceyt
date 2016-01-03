@@ -1,0 +1,34 @@
+{#
+
+This file is part of the Sonata package.
+
+(c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+{% extends 'SonataAdminBundle:CRUD:base_list.html.twig' %}
+
+{% block stylesheets %}
+{{ parent() }}
+  	<link rel="stylesheet" href="{{ asset('bundles/adminadmin/css/rowshorarios.css') }}" />
+{% endblock %}
+
+
+{% block preview %}
+  <ul class="nav nav-pills">
+    <li><a><strong>Contexto</strong></a></li>
+    {% set contexts= ['horarios', 'vencidos'] %}
+    {% for context in contexts %}
+      {% if context == admin.persistentParameters.context %}
+      <li class="active"><a href="{{ admin.generateUrl('list', {'context' : context }) }}">{{ ('admin.horario.context_' ~ context)|trans({}, 'AdminAdminBundle') }}</a></li>
+      {% else %}
+      <li><a href="{{ admin.generateUrl('list', {'context' : context }) }}">{{ ('admin.horario.context_' ~ context)|trans({}, 'AdminAdminBundle') }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endblock %}
+{# kate: tab-width 2; #}
+

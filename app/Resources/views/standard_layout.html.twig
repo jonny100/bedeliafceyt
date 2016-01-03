@@ -1,0 +1,27 @@
+{% extends 'SonataAdminBundle::standard_layout.html.twig' %}
+
+{% block body_attributes %}class="sonata-bc skin-black fixed sidebar-collapse"{% endblock %}
+{# kate: tab-width 2 #}
+
+
+{% block side_bar_after_nav %}
+    <p class="text-center small" style="border-top: 1px solid #444444; padding-top: 10px"><a href="#" rel="noreferrer" target="_blank">Sonata Project</a></p>
+    {#<p class="text-center small" style="border-top: 1px solid #444444; padding-top: 10px"><a href="{{ admin.generateUrl('calendar') }}" rel="noreferrer">Calendarios</a></p>#}
+{% endblock %}
+
+
+{% block logo %}
+    {% if admin_pool is defined %}
+        {% spaceless %}
+            <a class="logo" href="{{ path('sonata_admin_dashboard') }}">
+                {% if 'single_image' == admin_pool.getOption('title_mode') or 'both' == admin_pool.getOption('title_mode') %}
+                    <img src="/Bedelia/web/bundles/adminadmin/images/logo_bedelia_11.png" alt="{{ admin_pool.title }}">
+                {% endif %}
+                {% if 'single_text' == admin_pool.getOption('title_mode') or 'both' == admin_pool.getOption('title_mode') %}
+                    <span>Kasay</span>
+                {% endif %}
+            </a>
+        {% endspaceless %}
+    {% endif %}
+{% endblock %}
+
